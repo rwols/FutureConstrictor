@@ -40,8 +40,8 @@ target_include_directories(${PROJECT_NAME}Static
         $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
-target_compile_features(${PROJECT_NAME}Static PUBLIC cxx_std_14)
-target_compile_features(ObjectFiles PUBLIC cxx_std_14)
+target_compile_features(${PROJECT_NAME}Static PUBLIC cxx_std_17)
+target_compile_features(ObjectFiles PUBLIC cxx_std_17)
 find_package(Threads REQUIRED)
 target_link_libraries(${PROJECT_NAME}Static PUBLIC Threads::Threads)
 enable_testing()
