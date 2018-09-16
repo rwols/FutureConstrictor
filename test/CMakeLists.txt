@@ -4,8 +4,12 @@ add_executable(${testexe}
     Module.cpp
     BoundedConstrictor.cpp
     SingleConstrictor.cpp
-    UnboundedConstrictor.cpp)
-set_target_properties(${testexe} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
+    UnboundedConstrictor.cpp
+)
+set_target_properties(${testexe}
+    PROPERTIES
+        OUTPUT_NAME ${PROJECT_NAME}
+)
 target_link_libraries(${testexe} PRIVATE ${PROJECT_NAME} Boost::unit_test_framework)
 target_compile_definitions(${testexe} PRIVATE BOOST_TEST_DYN_LINK)
 
@@ -18,12 +22,7 @@ function(unit_tests)
 endfunction(unit_tests)
 
 unit_tests(
-    ConstructAndDestruct1
-    ConstructAndDestruct2
-    Lock
-    HasAvailableSlot
-    Add1
-    Add2
-    MapDeletionWhenAll
-    LotsOfFutures
+    BoundedConstrictorSuite
+    SingleConstrictorSuite
+    UnboundedConstrictorSuite
 )

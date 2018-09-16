@@ -6,7 +6,7 @@
 
 namespace rwols {
 
-class BoundedConstrictor final : public IFutureConstrictor {
+class FC_API BoundedConstrictor final : public IFutureConstrictor {
 public:
   BoundedConstrictor();
   BoundedConstrictor(std::size_t max_number_of_futures);

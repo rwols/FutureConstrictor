@@ -4,7 +4,7 @@
 
 namespace rwols {
 
-class SingleConstrictor final : public IFutureConstrictor {
+class FC_API SingleConstrictor final : public IFutureConstrictor {
 public:
   SingleConstrictor() = default;
 

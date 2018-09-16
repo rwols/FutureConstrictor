@@ -1,12 +1,14 @@
 #pragma once
 
+#include <rwols/API.hpp>
+
 #include <stlab/concurrency/future.hpp>
 
 #include <mutex>
 
 namespace rwols {
 
-class IFutureConstrictor {
+class FC_API IFutureConstrictor {
 public:
   struct Mutator final {
     bool HasAvailableSlot() const noexcept;

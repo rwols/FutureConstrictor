@@ -6,7 +6,7 @@
 
 namespace rwols {
 
-class UnboundedConstrictor final : public IFutureConstrictor {
+class FC_API UnboundedConstrictor final : public IFutureConstrictor {
 public:
   UnboundedConstrictor() = default;
 
